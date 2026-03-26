@@ -18,7 +18,7 @@ const AnimatedSphere = () => {
       <mesh ref={meshRef} scale={2.2}>
         <icosahedronGeometry args={[1, 4]} />
         <MeshDistortMaterial
-          color="#dc2626"
+          color="#1a1a1a"
           wireframe
           distort={0.3}
           speed={2}
@@ -41,7 +41,7 @@ const FloatingRing = ({ position, color }: { position: [number, number, number];
   return (
     <mesh ref={ref} position={position}>
       <torusGeometry args={[0.8, 0.05, 16, 100]} />
-      <meshStandardMaterial color={color} emissive={color} emissiveIntensity={0.5} />
+      <meshStandardMaterial color={color} emissive={color} emissiveIntensity={0.3} />
     </mesh>
   );
 };
@@ -51,11 +51,11 @@ const HeroScene = () => {
     <div className="absolute inset-0 z-0">
       <Canvas camera={{ position: [0, 0, 6], fov: 50 }}>
         <ambientLight intensity={0.3} />
-        <pointLight position={[5, 5, 5]} intensity={1} color="#ff3333" />
-        <pointLight position={[-5, -5, -5]} intensity={0.5} color="#ff6666" />
+        <pointLight position={[5, 5, 5]} intensity={1} color="#333333" />
+        <pointLight position={[-5, -5, -5]} intensity={0.5} color="#666666" />
         <AnimatedSphere />
-        <FloatingRing position={[2.5, 1, -1]} color="#ff2222" />
-        <FloatingRing position={[-2.5, -1, -1]} color="#ff4444" />
+        <FloatingRing position={[2.5, 1, -1]} color="#222222" />
+        <FloatingRing position={[-2.5, -1, -1]} color="#444444" />
         <OrbitControls enableZoom={false} enablePan={false} autoRotate autoRotateSpeed={0.5} />
       </Canvas>
     </div>
