@@ -1,20 +1,7 @@
-import { useState } from "react";
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, Send } from "lucide-react";
-import { useToast } from "@/hooks/use-toast";
+import { Mail, Phone, MapPin } from "lucide-react";
 
 const ContactSection = () => {
-  const { toast } = useToast();
-  const [form, setForm] = useState({ name: "", email: "", service: "", message: "" });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    toast({
-      title: "Quote request sent!",
-      description: "We'll get back to you within 24 hours.",
-    });
-    setForm({ name: "", email: "", service: "", message: "" });
-  };
 
   return (
     <section id="contact" className="py-24 relative">
@@ -80,71 +67,24 @@ const ContactSection = () => {
             </div>
           </motion.div>
 
-          {/* Form */}
-          <motion.form
+          {/* Google Form */}
+          <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            onSubmit={handleSubmit}
-            className="bg-card border border-border rounded-xl p-8 space-y-5"
+            className="bg-card border border-border rounded-xl overflow-hidden"
           >
-            <div>
-              <label className="text-sm text-muted-foreground block mb-1.5">Your Name</label>
-              <input
-                required
-                maxLength={100}
-                value={form.name}
-                onChange={(e) => setForm({ ...form, name: e.target.value })}
-                className="w-full px-4 py-3 rounded-lg bg-secondary border border-border text-foreground focus:border-primary focus:outline-none transition"
-                placeholder="John Doe"
-              />
-            </div>
-            <div>
-              <label className="text-sm text-muted-foreground block mb-1.5">Email</label>
-              <input
-                required
-                type="email"
-                maxLength={255}
-                value={form.email}
-                onChange={(e) => setForm({ ...form, email: e.target.value })}
-                className="w-full px-4 py-3 rounded-lg bg-secondary border border-border text-foreground focus:border-primary focus:outline-none transition"
-                placeholder="john@example.com"
-              />
-            </div>
-            <div>
-              <label className="text-sm text-muted-foreground block mb-1.5">Service Needed</label>
-              <select
-                required
-                value={form.service}
-                onChange={(e) => setForm({ ...form, service: e.target.value })}
-                className="w-full px-4 py-3 rounded-lg bg-secondary border border-border text-foreground focus:border-primary focus:outline-none transition"
-              >
-                <option value="">Select a service</option>
-                <option value="web">Web Development</option>
-                <option value="app">App Development</option>
-                <option value="marketing">Digital Marketing</option>
-              </select>
-            </div>
-            <div>
-              <label className="text-sm text-muted-foreground block mb-1.5">Project Details</label>
-              <textarea
-                required
-                maxLength={1000}
-                rows={4}
-                value={form.message}
-                onChange={(e) => setForm({ ...form, message: e.target.value })}
-                className="w-full px-4 py-3 rounded-lg bg-secondary border border-border text-foreground focus:border-primary focus:outline-none transition resize-none"
-                placeholder="Tell us about your project..."
-              />
-            </div>
-            <button
-              type="submit"
-              className="w-full py-3.5 rounded-lg bg-primary text-primary-foreground font-bold flex items-center justify-center gap-2 hover:opacity-90 transition glow-red-sm"
+            <iframe
+              src="https://docs.google.com/forms/d/e/1FAIpQLScduolU-0q61J1SoWc1ZE5SGID07LZ8UDYHU5uih-DSB6wgGQ/viewform?embedded=true"
+              width="100%"
+              height="600"
+              className="border-0 w-full"
+              title="Contact Form"
+              loading="lazy"
             >
-              <Send size={18} />
-              Send Request
-            </button>
-          </motion.form>
+              Loading…
+            </iframe>
+          </motion.div>
         </div>
       </div>
     </section>
