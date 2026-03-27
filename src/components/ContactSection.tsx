@@ -75,7 +75,7 @@ const ContactSection = () => {
             className="bg-card border border-border rounded-xl overflow-hidden"
           >
             <iframe
-              src="https://docs.google.com/forms/d/e/1FAIpQLSdKx9kXZ5ojrgfm6/viewform?embedded=true"
+              src="https://docs.google.com/forms/d/e/1FAIpQLScduolU-0q61J1SoWc1ZE5SGID07LZ8UDYHU5uih-DSB6wgGQ/viewform?embedded=true"
               width="100%"
               height="600"
               className="border-0 w-full"
