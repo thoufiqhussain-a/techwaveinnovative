@@ -1,20 +1,7 @@
-import { useState } from "react";
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, Send } from "lucide-react";
-import { useToast } from "@/hooks/use-toast";
+import { Mail, Phone, MapPin } from "lucide-react";
 
 const ContactSection = () => {
-  const { toast } = useToast();
-  const [form, setForm] = useState({ name: "", email: "", service: "", message: "" });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    toast({
-      title: "Quote request sent!",
-      description: "We'll get back to you within 24 hours.",
-    });
-    setForm({ name: "", email: "", service: "", message: "" });
-  };
 
   return (
     <section id="contact" className="py-24 relative">
