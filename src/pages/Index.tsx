@@ -9,9 +9,11 @@ import FAQSection from "@/components/FAQSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import Preloader from "@/components/Preloader";
 
 const Index = () => (
   <div className="min-h-screen bg-background">
+    <Preloader />
     <Navbar />
     <HeroSection />
     <TechMarquee />
