@@ -2,8 +2,8 @@ import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import TechMarquee from "@/components/TechMarquee";
 import ServicesSection from "@/components/ServicesSection";
+import BillingSoftwareSection from "@/components/BillingSoftwareSection";
 import PortfolioSection from "@/components/PortfolioSection";
-import PricingSection from "@/components/PricingSection";
 import CTASection from "@/components/CTASection";
 import ResultsSection from "@/components/ResultsSection";
 import FAQSection from "@/components/FAQSection";
@@ -17,8 +17,8 @@ const Index = () => (
     <HeroSection />
     <TechMarquee />
     <ServicesSection />
+    <BillingSoftwareSection />
     <PortfolioSection />
-    <PricingSection />
     <CTASection />
     <ResultsSection />
     <FAQSection />
