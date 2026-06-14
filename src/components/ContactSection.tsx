@@ -83,18 +83,38 @@ const ContactSection = () => {
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="bg-card border border-border rounded-xl overflow-hidden"
+            className="flex flex-col justify-center space-y-6"
           >
-            <iframe
-              src="https://docs.google.com/forms/d/e/1FAIpQLScduolU-0q61J1SoWc1ZE5SGID07LZ8UDYHU5uih-DSB6wgGQ/viewform?embedded=true"
-              width="100%"
-              height="600"
-              className="border-0 w-full"
-              title="Contact Form"
-              loading="lazy"
+            <div className="bg-card border border-border rounded-xl p-8">
+              <h4 className="text-xl font-bold mb-4">Why Choose Tech Wave?</h4>
+              <ul className="space-y-3 text-muted-foreground">
+                <li className="flex items-start gap-3">
+                  <span className="text-primary mt-1">&#10003;</span>
+                  <span>Experienced startup-focused development team</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-primary mt-1">&#10003;</span>
+                  <span>On-time delivery with transparent pricing</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-primary mt-1">&#10003;</span>
+                  <span>Dedicated post-launch support & maintenance</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-primary mt-1">&#10003;</span>
+                  <span>Modern tech stack tailored to your needs</span>
+                </li>
+              </ul>
+            </div>
+            <a
+              href="https://wa.me/9193849546207"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 w-full py-4 rounded-xl bg-primary text-primary-foreground font-bold text-lg hover:scale-[1.02] transition"
             >
-              Loading…
-            </iframe>
+              <MessageCircle size={22} />
+              Get Free Consultation on WhatsApp
+            </a>
           </motion.div>
         </div>
       </div>
