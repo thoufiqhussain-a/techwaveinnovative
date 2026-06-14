@@ -41,7 +41,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground">Phone</p>
-                  <p className="text-foreground font-medium">+91 93849 546207</p>
+                  <p className="text-foreground font-medium">+91 93849 54607</p>
                 </div>
               </div>
               <div className="flex items-center gap-4">
@@ -51,7 +51,7 @@ const ContactSection = () => {
                 <div>
                   <p className="text-sm text-muted-foreground">WhatsApp</p>
                   <a
-                    href="https://wa.me/9193849546207"
+                    href="https://wa.me/919384954607"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-foreground font-medium hover:text-primary transition"
@@ -107,7 +107,7 @@ const ContactSection = () => {
               </ul>
             </div>
             <a
-              href="https://wa.me/9193849546207"
+              href="https://wa.me/919384954607"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 w-full py-4 rounded-xl bg-primary text-primary-foreground font-bold text-lg hover:scale-[1.02] transition"
